@@ -19,6 +19,7 @@
         "migration:reset": "supabase db reset"
     },
     "dependencies": {
+        "@tailwindcss/typography": "^0.5.10",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",
         "lucide-react": "^0.290.0",
