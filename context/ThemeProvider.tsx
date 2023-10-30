@@ -22,12 +22,9 @@ export default function ThemeProvider({
 
   const handleThemeChange = () => {
     if (
-      // TODO: remove "false" to allow system theme change
-      // eslint-disable-next-line no-constant-condition
-      false &&
-      (localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches))
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       setMode("dark");
       document.documentElement.classList.add("dark");
@@ -44,8 +41,7 @@ export default function ThemeProvider({
   return (
     <ThemeContext.Provider
       value={{
-        // TODO: remove `: "light"` to allow system theme change
-        mode: "light",
+        mode,
         setMode,
       }}
     >

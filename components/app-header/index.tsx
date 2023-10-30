@@ -3,6 +3,7 @@ import { LuLogOut } from "react-icons/lu";
 
 import SignOutButton from "../buttons/SignOutButton";
 import MobileSidebar from "../sidebar/mobile-sidebar";
+import Theme from "./theme";
 
 export default function AppHeader() {
   return (
@@ -13,8 +14,7 @@ export default function AppHeader() {
         </p>
       </Link>
       <div className="flex-center text-dark100_light900 font-semibold">
-        {/* TODO: uncomment to allow system theme change */}
-        {/* <Theme /> */}
+        <Theme />
         <SignOutButton className="flex-center px-4 py-2 text-red-400 hover:opacity-70">
           <LuLogOut className="mr-2 inline-block h-6 w-6 max-sm:hidden" />
         </SignOutButton>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LuLogIn } from "react-icons/lu";
 
 import AppFooter from "@/components/app-footer";
+import Theme from "@/components/app-header/theme";
 
 export const metadata: Metadata = {
   title: "Bem Vindo",
@@ -18,7 +19,7 @@ export default function Home() {
           </p>
         </Link>
         <section className="flex-center text-dark100_light900 font-semibold">
-          {/* TODO: <Theme /> */}
+          <Theme />
           <Link
             href="/sign-in"
             className="flex-center px-4 py-2 text-red-400 hover:opacity-70"

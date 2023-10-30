@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 import AppFooter from "@/components/app-footer";
+import Theme from "@/components/app-header/theme";
 
 export default async function UnloggedLayout({
   children,
@@ -30,9 +31,9 @@ export default async function UnloggedLayout({
 
   return (
     <div className="background-light850_dark100 relative flex h-screen min-h-[100dvh] flex-col">
-      {/* <div className="fixed flex w-full justify-end p-6">
-          <Theme />
-        </div> */}
+      <div className="fixed flex w-full justify-end p-6">
+        <Theme />
+      </div>
       <main className="flex-center h-full flex-1 flex-col">
         <p className="h1-bold text-dark100_light900 -roboto p-6">
           My<span className="text-blue-400">App</span>
