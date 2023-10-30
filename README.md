@@ -10,7 +10,10 @@ Also including Shadcn UI and React Hook Form with Zod validations
 
 ## Starting from this Starter
 
-- Run `supabase init` to setup a new supabase project for the app
+1. Delete supabase folder to init it from scratch
+2. Run `supabase init` to setup a new supabase project for the app
+3. Search for occurrences of "MyApp" and replace it with the name of you app
+4. Search for occurrences of "TODO" and fix it according to your needs
 
 ## Running Locally
 

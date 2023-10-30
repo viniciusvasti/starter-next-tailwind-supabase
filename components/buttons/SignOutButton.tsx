@@ -2,8 +2,6 @@
 import { createBrowserClient } from "@supabase/ssr";
 import React from "react";
 
-import { Database } from "@/lib/database.types";
-
 export default function SignOutButton({
   children,
   ...props
@@ -11,7 +9,7 @@ export default function SignOutButton({
   children: React.ReactNode;
   [key: string]: any;
 }) {
-  const supabase = createBrowserClient<Database>(
+  const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
   );
