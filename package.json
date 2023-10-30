@@ -8,6 +8,8 @@
         "start": "next start",
         "lint": "next lint",
         "lint:fix": "next lint --fix",
+        "prettier": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "prepare": "husky install",
         "supabase": "supabase start",
         "supabase:stop": "supabase stop",
         "supabase:light": "supabase start -x realtime,storage-api,imgproxy,inbucket,studio,logflare,pgadmin-schema-diff,migra,postgres-meta,edge-runtime,vector,pgbouncer",
