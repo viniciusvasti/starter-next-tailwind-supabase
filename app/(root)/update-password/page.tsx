@@ -2,13 +2,11 @@ import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { Database } from "@/lib/database.types";
-
 import UpdatePassword from "./UpdatePassword";
 
 export default async function UpdatePasswordPage() {
   const cookieStore = cookies();
-  const supabase = createServerClient<Database>(
+  const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {

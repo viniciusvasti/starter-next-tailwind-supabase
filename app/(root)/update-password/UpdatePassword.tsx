@@ -16,12 +16,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { Database } from "@/lib/database.types";
-import { updatePasswordFormSchema } from "@/lib/validations";
+import { updatePasswordFormSchema } from "@/lib/types/auth.schema";
 
 const UpdatePassword = () => {
   const { toast } = useToast();
-  const supabase = createBrowserClient<Database>(
+  const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
   );
